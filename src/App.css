@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
+  --primary-color: #16a085;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Satisfy', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -175,6 +175,12 @@ img {
 }
 .my-3 {
   margin: 3rem 0;
+}
+.mr-05 {
+  margin-right: 0.5rem;
+}
+.ml-05 {
+  margin-left: 0.5rem;
 }
 
 /* Grid */
