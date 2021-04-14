@@ -434,3 +434,8 @@ table th {
   overflow: hidden;
   background-color: white;
 }
+
+.search-user {
+  width: 95%;
+  margin: 0 auto;
+}
