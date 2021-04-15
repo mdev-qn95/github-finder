@@ -261,6 +261,7 @@ img {
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
+  margin-top: 0px;
 }
 
 .btn-primary,
