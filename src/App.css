@@ -222,6 +222,7 @@ img {
   cursor: pointer;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 25px;
 }
 
 .btn-link {
@@ -232,7 +233,9 @@ img {
 
 .btn-block {
   display: block;
-  width: 100%;
+  width: 10%;
+  margin: 1.2rem 0;
+  padding: 0.5rem;
 }
 
 .btn-sm {
@@ -340,10 +343,11 @@ input[type='date'],
 select,
 textarea {
   display: block;
-  width: 100%;
+  width: 78%;
   padding: 0.4rem;
-  font-size: 1.2rem;
+  font-family: 'Montserrat';
   border: 1px solid #ccc;
+  border-radius: 20px;
 }
 
 input[type='submit'],
@@ -429,13 +433,38 @@ table th {
 }
 
 .loading {
-  height: calc(100vh - 62px);
+  height: calc(100vh - 142px);
   width: 100%;
   overflow: hidden;
   background-color: white;
 }
-
-.search-user {
+.search-form {
   width: 95%;
-  margin: 0 auto;
+  margin: auto;
+  display: flex;
+  max-height: 80px;
+  justify-content: space-around;
+}
+input[type='text']:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='date'],
+  select,
+  textarea {
+    width: 48%;
+  }
+
+  .btn-block {
+    width: 25%;
+  }
+
+  img.loading-img {
+    width: inherit !important;
+    height: auto !important;
+  }
 }

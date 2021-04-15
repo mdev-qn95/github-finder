@@ -7,6 +7,7 @@ const Loading = () => (
       <img
         src={loading}
         alt='Loading...'
+        className="loading-img"
         style={{ width: 'auto', height: '100%', margin: 'auto', display: 'block' }}
       />
     </div>
