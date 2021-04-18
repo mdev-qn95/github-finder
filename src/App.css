@@ -449,10 +449,16 @@ table th {
 input[type='text']:focus {
   outline: none;
 }
-.about-container {
+.about-container,
+.user-container {
   width: 95%;
   margin: 12px auto;
   color: white;
+}
+.user-container .card {
+  color: #333333;
+  width: 100%;
+  margin-left: 0px;
 }
 @media screen and (max-width: 600px) {
   input[type='text'],
