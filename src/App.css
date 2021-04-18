@@ -118,7 +118,7 @@ img {
   width: 218px;
   min-height: 195px;
   padding: 20px;
-  margin: 24px;
+  margin: 36px;
   box-shadow: -20px -20px 0px 0px #fb968b;
   border-radius: 10px;
   animation-name: shadow-show;
@@ -450,15 +450,30 @@ input[type='text']:focus {
   outline: none;
 }
 .about-container,
-.user-container {
+.user-container,
+.repos-list {
   width: 95%;
   margin: 12px auto;
   color: white;
 }
-.user-container .card {
+.user-container .card,
+.repos-list .card {
   color: #333333;
   width: 100%;
   margin-left: 0px;
+}
+.repos-list .card .btn {
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+span.hireable {
+  margin-left: 12px;
+}
+.card.text-center.more-info {
+  min-height: 78px;
+}
+.user-loading .loading {
+  height: calc(100vh - 62px);
 }
 @media screen and (max-width: 600px) {
   input[type='text'],
@@ -480,5 +495,13 @@ input[type='text']:focus {
   }
   .navbar {
     height: 88px;
+  }
+  .repos-list .card .btn {
+    width: 100%;
+  }
+  .badge {
+    width: 50%;
+    margin-left: 0px;
+    padding: 10px;
   }
 }

@@ -1,17 +1,21 @@
 import React, { Component, Fragment } from 'react';
 import Loading from '../layout/Loading';
+import Repos from '../repos/Repos';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 export class User extends Component {
   componentDidMount() {
     this.props.getUser(this.props.match.params.login);
+    this.props.getUserRepos(this.props.match.params.login);
   }
 
   static propTypes = {
     loading: PropTypes.bool,
     user: PropTypes.object.isRequired,
+    repos: PropTypes.array.isRequired,
     getUser: PropTypes.func.isRequired,
+    getUserRepos: PropTypes.func.isRequired,
   };
 
   render() {
@@ -30,21 +34,29 @@ export class User extends Component {
       public_gists,
       hireable,
     } = this.props.user;
-    const { loading } = this.props;
 
-    if (loading) return <Loading />;
+    const { loading, repos } = this.props;
+
+    if (loading)
+      return (
+        <div className='user-loading'>
+          <Loading />
+        </div>
+      );
     return (
       <Fragment>
         <div className='user-container'>
           <Link to='/' className='btn btn-light'>
             Back to Search
           </Link>
-          Hireable:{' '}
-          {hireable ? (
-            <i className='fas fa-check text-success' />
-          ) : (
-            <i className='fas fa-times-circle text-danger' />
-          )}
+          <span className='hireable'>
+            Hireable:{' '}
+            {hireable ? (
+              <i className='fas fa-check text-success' />
+            ) : (
+              <i className='fas fa-times-circle text-danger' />
+            )}
+          </span>
           <div className='card grid-2'>
             <div className='all-center'>
               <img
@@ -91,13 +103,18 @@ export class User extends Component {
               </ul>
             </div>
           </div>
-          <div className='card text-center'>
+          <div className='card text-center more-info'>
             <div className='badge badge-primary'>Followers: {followers}</div>
             <div className='badge badge-light'>Following: {following}</div>
             <div className='badge badge-danger'>
               Public Repos: {public_repos}
             </div>
             <div className='badge badge-dark'>Public Gists: {public_gists}</div>
+          </div>
+        </div>
+        <div className='repos-list'>
+          <div className='card'>
+            <Repos repos={repos} />
           </div>
         </div>
       </Fragment>
