@@ -449,7 +449,11 @@ table th {
 input[type='text']:focus {
   outline: none;
 }
-
+.about-container {
+  width: 95%;
+  margin: 12px auto;
+  color: white;
+}
 @media screen and (max-width: 600px) {
   input[type='text'],
   input[type='email'],
@@ -467,5 +471,8 @@ input[type='text']:focus {
   img.loading-img {
     width: inherit !important;
     height: auto !important;
+  }
+  .navbar {
+    height: 88px;
   }
 }
