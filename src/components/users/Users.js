@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import UserItem from './UserItem';
 import Loading from '../layout/Loading';
-import PropTypes from 'prop-types';
+import GithubContext from '../../context/github/githubContext'
 
-const Users = ({ users, loading }) => {
+const Users = () => {
+  const githubContext = useContext(GithubContext)
+
+  const { loading, users } = githubContext;
+
   if (loading) {
     return <Loading />;
   } else {
@@ -15,11 +19,6 @@ const Users = ({ users, loading }) => {
       </div>
     );
   }
-};
-
-Users.propTypes = {
-  users: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired,
 };
 
 export default Users;
