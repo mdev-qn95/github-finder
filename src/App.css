@@ -421,12 +421,6 @@ table th {
     font-size: 1rem;
   }
 
-  /* Navbar */
-  .navbar {
-    display: block;
-    text-align: center;
-  }
-
   .navbar ul {
     text-align: center;
     justify-content: center;
@@ -475,6 +469,9 @@ span.hireable {
 .user-loading .loading {
   height: calc(100vh - 62px);
 }
+.loading.not-found {
+  height: calc(100vh - 62px);
+}
 @media screen and (max-width: 600px) {
   input[type='text'],
   input[type='email'],
@@ -483,6 +480,12 @@ span.hireable {
   select,
   textarea {
     width: 48%;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: block;
+    text-align: center;
   }
 
   .btn-block {
