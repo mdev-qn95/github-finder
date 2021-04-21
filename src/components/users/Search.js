@@ -23,7 +23,7 @@ const Search = () => {
   return (
     <div className='search-user'>
       <form onSubmit={onSubmit} className='form'>
-        <div className='search-form'>
+        <div className={githubContext.users.length > 0 ? 'list-data search-form' : 'search-form'}>
           <input
             type='text'
             name='text'

@@ -41,7 +41,7 @@ const User = ({ match }) => {
   return (
     <Fragment>
       <div className='user-container'>
-        <Link to='/' className='btn btn-light'>
+        <Link to='/' className='btn btn-light back'>
           Back to Search
         </Link>
         <span className='hireable'>

@@ -233,7 +233,7 @@ img {
 
 .btn-block {
   display: block;
-  width: 10%;
+  width: 80px;
   margin: 1.2rem 0;
   padding: 0.5rem;
 }
@@ -344,11 +344,20 @@ input[type='date'],
 select,
 textarea {
   display: block;
-  width: 78%;
+  width: calc(100% - 90px);
   padding: 0.4rem;
   font-family: 'Montserrat';
   border: 1px solid #ccc;
   border-radius: 20px;
+}
+
+.list-data input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+select,
+textarea {
+  width: calc(100% - 175px);
 }
 
 input[type='submit'],
@@ -473,23 +482,14 @@ span.hireable {
   height: calc(100vh - 62px);
 }
 @media screen and (max-width: 600px) {
-  input[type='text'],
-  input[type='email'],
-  input[type='password'],
-  input[type='date'],
-  select,
-  textarea {
-    width: 48%;
-  }
-
   /* Navbar */
   .navbar {
     display: block;
     text-align: center;
   }
-
-  .btn-block {
-    width: 25%;
+  .navbar h1 {
+    font-size: 1.2em;
+    margin-top: 5px;
   }
 
   img.loading-img {
@@ -506,5 +506,8 @@ span.hireable {
     width: 50%;
     margin-left: 0px;
     padding: 10px;
+  }
+  a.btn.btn-light.back {
+    padding: 0.5rem 2.5rem;
   }
 }
