@@ -27,7 +27,7 @@ const Search = () => {
           <input
             type='text'
             name='text'
-            placeholder='Search Users...'
+            placeholder='Search Users... Ex: mdev-qn95'
             value={text}
             onChange={onChange}
           />
